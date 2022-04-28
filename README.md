@@ -25,7 +25,7 @@ $ vim .env
 
 ## Uso
 
-Revise y modifique el ejemplo presente en la función `main` en el archivo `main.py`.
+Revise y modifique el ejemplo presente en la función `main` en el archivo [`main.py`](main.py).
 
 ```
 (default)$ python main.py

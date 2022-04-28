@@ -4,17 +4,18 @@ from models import Dataset, Resource
 
 def main():
     """ Crear recurso con url """
-    r = Resource(
-        package_id='8e00ae81-8763-4b6d-97d3-8ceb7677d7aa',
-        url='https://datosabiertos.bogota.gov.co/dataset/e8bbee49-fa9f-46d2-a357-3846db5a737e/resource/40ffd4bb-a09d-47e5-8d92-5f0c5dde65c5/download/parques_urbanos.csv'
-    )
-    create_resource(resource=r)
+    # r = Resource(
+    #     package_id='el-dataset',
+    #     name="El recurso",
+    #     upload='/Users/ddazal/Desktop/mtcars.csv'
+    # )
+    # create_resource(resource=r)
     """ Crear conjunto de datos sin recursos """
     # d = Dataset(
-    #     name='gimnasios-urbanos',
-    #     title="Gimnasios urbanos",
+    #     name='el-dataset',
+    #     title="El dataset",
     #     private=False,
-    #     owner_org='idrd',
+    #     owner_org='datasketch',
     #     author="David Daza",
     #     author_email="david@datasketch.co",
     #     maintainer="David Daza",

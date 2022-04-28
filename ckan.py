@@ -3,9 +3,11 @@ import os
 import requests
 from dotenv import load_dotenv
 
+
 from models import Dataset, Resource
 
 load_dotenv()
+
 
 token = os.getenv('CKAN_API_TOKEN')
 ckan_site_url = os.getenv('CKAN_SITE_URL')
@@ -37,8 +39,8 @@ def create_resource(resource: Resource):
     else:
         response = requests.post(
             '{}/api/3/action/resource_create'.format(ckan_host),
-            json=resource.dict(),
+            data=resource.dict(exclude={'upload'}),
             headers=headers,
-            files=[('upload', open(resource.upload))]
+            files=[('upload', open(resource.upload))],
         )
     print(json.dumps(response.json(), indent=2))
